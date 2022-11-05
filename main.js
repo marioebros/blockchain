@@ -55,3 +55,10 @@ class Blockchain {
     return true;
   }
 }
+
+let jsChain = new Blockchain();
+jsChain.addBlock(new Block("11/05/2022", { amount: 5 }));
+jsChain.addBlock(new Block("11/06/2022", { amount: 10 }));
+
+console.log(JSON.stringify(jsChain, null, 4));
+console.log("Is blockchain valid? " + jsChain.checkValid());
